@@ -1,11 +1,21 @@
+import Header from "@/components/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const clash = localFont({
-  src: "./fonts/ClashGrotesk-Variable.woff2",
-  variable: "--font-clash",
-  weight: "100 900",
+const auger = localFont({
+  src: [
+    {
+      path: "./fonts/AugerMonoRegular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/AugerMonoBold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -21,8 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${clash.className} bg-neutral-300 text-neutral-900 antialiased`}
+        className={` ${auger.className} bg-amber-400 text-neutral-900 antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
