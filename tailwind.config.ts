@@ -7,7 +7,11 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        testimonia: ["var(--font-testimonia)"],
+      },
+    },
   },
   plugins: [require("tailwindcss-motion")],
 } satisfies Config;

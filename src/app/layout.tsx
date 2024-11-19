@@ -18,6 +18,11 @@ const auger = localFont({
   ],
 });
 
+const testimonia = localFont({
+  src: "./fonts/Testimonia.woff2",
+  variable: "--font-testimonia",
+});
+
 export const metadata: Metadata = {
   title: "Crossroads",
   description: "Crossroads - A choice based AI intigrated game.",
@@ -31,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${auger.className} bg-amber-400 text-neutral-900 antialiased`}
+        className={` ${auger.className} ${testimonia.variable} bg-neutral-300 text-neutral-900 antialiased`}
       >
         <Header />
         {children}
