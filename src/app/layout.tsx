@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={` ${auger.className} ${testimonia.variable} bg-neutral-300 text-neutral-900 antialiased`}
       >

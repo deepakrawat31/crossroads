@@ -8,21 +8,24 @@ export default function Header() {
         href={"/"}
         className="flex items-center gap-1 md:hover:motion-preset-shake md:motion-ease-spring-snappy"
       >
-        <FinnTheHuman className="size-6" />
+        <FinnTheHuman className="size-6" weight="light" />
         <span
-          className="text-sm font-bold uppercase aria-hidden:hidden md:aria-hidden:inline-flex"
+          className="text-sm uppercase aria-hidden:hidden md:aria-hidden:inline-flex"
           aria-hidden="true"
         >
           home
         </span>
       </Link>
-      <button className="group flex items-center gap-1 text-sm uppercase">
-        <span>start game</span>
+      <Link
+        href={"/game"}
+        className="group flex items-center gap-1 text-sm uppercase"
+      >
+        <span className="text-sm uppercase">start game</span>
         <ArrowUpRight
           className="size-6 md:transition-transform md:duration-500 md:group-hover:rotate-45"
-          weight="thin"
+          weight="light"
         />
-      </button>
+      </Link>
     </header>
   );
 }

@@ -1,10 +1,19 @@
+"use client";
+
 import {
   ArrowRight,
   At,
   GithubLogo,
   LinkedinLogo,
-} from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react";
 import Link from "next/link";
+
+const scrollToSection = () => {
+  const section = document.getElementById("target-section");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" }); //Scrolls to next section
+  }
+};
 
 export default function MainSection() {
   return (
@@ -19,8 +28,11 @@ export default function MainSection() {
             AI, where every decision you make shapes your journey and determin
             your ultimate fate.
           </p>
-          <button className="group motion-preset-slide-up-md flex items-center gap-2 self-end rounded-full px-4 py-2 text-sm uppercase ring-1 ring-neutral-600 motion-delay-700 motion-ease-spring-snappy md:ring-neutral-600/40 md:transition-all md:hover:ring-neutral-600">
-            <span>how to play</span>
+          <button
+            className="group motion-preset-slide-up-md flex items-center gap-2 self-end rounded-full px-4 py-2 text-sm uppercase ring-1 ring-neutral-600 motion-delay-700 motion-ease-spring-snappy md:ring-neutral-600/40 md:transition-all md:hover:ring-neutral-600"
+            onClick={scrollToSection}
+          >
+            <span>how it works</span>
             <ArrowRight
               className="size-6 rotate-90 md:rotate-0 md:transition-transform md:duration-500 md:group-hover:rotate-90"
               weight="thin"
