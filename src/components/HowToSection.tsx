@@ -30,6 +30,7 @@ export default function HowToSection() {
   return (
     <section
       className="flex min-h-[calc(100dvh-48px)] flex-col gap-2 p-2"
+      id="target-section"
       ref={ref}
     >
       {isVisible && (
