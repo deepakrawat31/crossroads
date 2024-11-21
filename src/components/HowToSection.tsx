@@ -1,4 +1,5 @@
 "use client";
+
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 export default function HowToSection() {
@@ -29,12 +30,11 @@ export default function HowToSection() {
   return (
     <section
       className="flex min-h-[calc(100dvh-48px)] flex-col gap-2 p-2"
-      id="target-section"
       ref={ref}
     >
       {isVisible && (
         <>
-          <div className="motion-preset-slide-up-md flex justify-center motion-delay-200 motion-ease-spring-snappy">
+          <div className="motion-preset-slide-up-md flex justify-center pt-4 motion-delay-200 motion-ease-spring-snappy">
             <h3 className="font-testimonia text-6xl md:text-8xl">
               how it works:
             </h3>

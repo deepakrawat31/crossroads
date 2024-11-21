@@ -1,7 +1,14 @@
-import { ArrowUpRight, FinnTheHuman } from "@phosphor-icons/react/dist/ssr";
+"use client";
+
+import { ArrowUpRight, FinnTheHuman } from "@phosphor-icons/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathName = usePathname();
+
+  const isGamePage = (path: string) => pathName === path;
+
   return (
     <header className="motion-preset-slide-down-lg sticky top-0 z-50 flex items-center justify-between gap-4 bg-neutral-300 p-3 ring-1 ring-neutral-600/30 motion-ease-spring-snappy">
       <Link
@@ -16,16 +23,18 @@ export default function Header() {
           home
         </span>
       </Link>
-      <Link
-        href={"/game"}
-        className="group flex items-center gap-1 text-sm uppercase"
-      >
-        <span className="text-sm uppercase">start game</span>
-        <ArrowUpRight
-          className="size-6 md:transition-transform md:duration-500 md:group-hover:rotate-45"
-          weight="light"
-        />
-      </Link>
+      {!isGamePage("/game") && (
+        <Link
+          href={"/game"}
+          className="group flex items-center gap-1 text-sm uppercase"
+        >
+          <span className="text-sm uppercase">start game</span>
+          <ArrowUpRight
+            className="size-6 md:transition-transform md:duration-500 md:group-hover:rotate-45"
+            weight="light"
+          />
+        </Link>
+      )}
     </header>
   );
 }
