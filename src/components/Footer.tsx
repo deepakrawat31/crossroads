@@ -48,13 +48,13 @@ export default function Footer() {
             <Link
               href={tool.link}
               target="_blank"
-              className="flex max-w-xl flex-col gap-2 uppercase leading-relaxed text-neutral-300 duration-300 md:text-neutral-600 md:transition-colors md:group-hover:text-neutral-300"
+              className="flex max-w-xl flex-col gap-2 uppercase leading-relaxed text-neutral-300 md:text-neutral-600 md:transition-colors md:duration-500 md:group-hover:text-neutral-300"
             >
               <span className="flex items-center justify-between gap-2">
                 <small>{tool.tool}</small>
-                <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:rotate-45" />
+                <ArrowUpRight className="size-4 md:transition-transform md:duration-500 md:group-hover:rotate-45" />
               </span>
-              <span className="text-sm">{tool.text}</span>
+              <span className="text-sm md:text-base">{tool.text}</span>
             </Link>
           </span>
         ))}
@@ -65,7 +65,7 @@ export default function Footer() {
             target="_blank"
             className="flex w-full max-w-xl items-center justify-between gap-2 uppercase leading-relaxed text-neutral-300 duration-300 md:text-neutral-600 md:transition-colors md:group-hover:text-neutral-300"
           >
-            <small>link to github repo</small>
+            <small className="text-sm md:text-base">link to github repo</small>
             <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:rotate-45" />
           </Link>
         </span>

@@ -28,10 +28,10 @@ export default function Header() {
           href={"/game"}
           className="group flex items-center gap-1 text-sm uppercase"
         >
-          <span className="text-sm uppercase">start game</span>
+          <span className="text-sm uppercase">play</span>
           <ArrowUpRight
             className="size-6 md:transition-transform md:duration-500 md:group-hover:rotate-45"
-            weight="light"
+            weight="thin"
           />
         </Link>
       )}
