@@ -14,8 +14,8 @@ export default function MainSection() {
   return (
     <main className="flex h-[calc(100dvh-48px)] flex-col items-center justify-center overflow-hidden p-2 md:flex-row">
       <div className="flex flex-1 items-center justify-center">
-        <span className="flex max-w-lg flex-col items-start justify-center gap-8">
-          <h1 className="motion-preset-slide-up-md font-testimonia text-6xl font-normal motion-delay-200 motion-ease-spring-snappy md:text-9xl">
+        <span className="flex max-w-lg flex-col items-start justify-center gap-4 md:gap-8">
+          <h1 className="motion-preset-slide-up-md font-testimonia text-7xl font-normal motion-delay-200 motion-ease-spring-snappy md:text-9xl">
             Crossroads
           </h1>
           <p className="motion-preset-slide-up-md text-justify leading-normal text-neutral-600 motion-delay-500 motion-ease-spring-snappy">

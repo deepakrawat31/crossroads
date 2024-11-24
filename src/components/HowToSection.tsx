@@ -29,18 +29,18 @@ export default function HowToSection() {
 
   return (
     <section
-      className="flex min-h-[calc(100dvh-48px)] scroll-my-12 flex-col gap-2 p-2"
+      className="flex min-h-[calc(100dvh-48px)] scroll-my-12 flex-col justify-evenly gap-4 p-2 md:gap-8"
       id="target-section"
       ref={ref}
     >
       {isVisible && (
         <>
           <div className="motion-preset-slide-up-md flex justify-center motion-delay-200 motion-ease-spring-snappy">
-            <h3 className="font-testimonia text-6xl md:text-9xl">
+            <h3 className="font-testimonia text-7xl md:text-9xl">
               how it works:
             </h3>
           </div>
-          <div className="motion-preset-slide-up-md flex flex-1 items-center justify-center motion-delay-500 motion-ease-spring-snappy">
+          <div className="motion-preset-slide-up-md flex items-center justify-center motion-delay-500 motion-ease-spring-snappy">
             <ul className="flex max-w-lg flex-col gap-8">
               {rules.map((rule) => (
                 <li key={rule.id} className="flex gap-2 md:gap-4">
